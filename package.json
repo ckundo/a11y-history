@@ -1,0 +1,25 @@
+{
+  "name": "a11y-blame",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ckundo/a11y-blame.git",
+  "author": "Cameron Cundiff <ccundiff@linkedin.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^16.2.13",
+    "jsdom-global": "^3.0.2",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@alloc/git-patch-parser": "^1.1.2",
+    "@octokit/graphql": "^4.6.4",
+    "@octokit/rest": "^18.7.1",
+    "@types/git-diff-parser": "^1.0.1",
+    "axe-core": "^4.3.1",
+    "git-diff-parser": "^1.0.0",
+    "jsdom": "^16.6.0"
+  }
+}
