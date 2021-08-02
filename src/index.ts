@@ -14,7 +14,7 @@ export async function run({ owner, repo }: { owner: string, repo: string }) {
   files
     .filter((file) => file.type === "blob" && file.path.match(extension))
     .forEach(async (file, index) => {
-      await sleep({ millis: 250 * index });
+      await sleep({ millis: 300 * index });
 
       try {
         const { ranges, content } = await blame({ owner, repo, file });
@@ -85,7 +85,7 @@ export async function run({ owner, repo }: { owner: string, repo: string }) {
 
               if (offense) {
                 console.log(
-                  `https://github.com/${owner}/${repo}/blob/${sha}/${file.path}#L${lintRanges[0]![0]}-L${lintRanges[0]![lintRanges[0]!.length - 1]}`,
+                  `${process.env.BASE_URL || 'https://github.com'}/${owner}/${repo}/blob/${sha}/${file.path}#L${lintRanges[0]![0]}-L${lintRanges[0]![lintRanges[0]!.length - 1]}`,
                   author,
                   result.violation.help
                 );

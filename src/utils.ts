@@ -13,7 +13,10 @@ export async function tree({
   owner: string;
   repo: string;
 }): Promise<File[]> {
-  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+  const octokit = new Octokit({
+    baseUrl: process.env.BASE_URL || "https://api.github.com",
+    auth: process.env.GITHUB_TOKEN,
+  });
 
   try {
     const {
@@ -21,7 +24,7 @@ export async function tree({
     } = await octokit.rest.git.getTree({
       owner,
       repo,
-      tree_sha: 'HEAD',
+      tree_sha: "HEAD",
       recursive: "true",
     });
 
@@ -44,6 +47,7 @@ export async function blame({
     owner,
     name: repo,
     path: file.path,
+    baseUrl: process.env.BASE_URL || "https://api.github.com",
     expression: `HEAD:${file.path}`,
     headers: {
       authorization: `token ${process.env.GITHUB_TOKEN}`,
@@ -124,7 +128,11 @@ export async function fetchPatch({
   repo: string;
   path: string;
 }): Promise<string | null> {
-  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+  const octokit = new Octokit({
+    baseUrl: process.env.BASE_URL || "https://api.github.com",
+    auth: process.env.GITHUB_TOKEN,
+  });
+
   try {
     const {
       data: { files },
