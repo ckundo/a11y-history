@@ -1,6 +1,6 @@
 {
   "name": "a11y-blame",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "index.js",
   "repository": "git@github.com:ckundo/a11y-blame.git",
   "author": "Cameron Cundiff <ccundiff@linkedin.com>",
