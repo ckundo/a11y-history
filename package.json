@@ -1,13 +1,13 @@
 {
-  "name": "a11y-blame",
-  "version": "0.2.2",
+  "name": "a11y-history",
+  "version": "0.3.0",
   "main": "index.js",
-  "repository": "git@github.com:ckundo/a11y-blame.git",
+  "repository": "git@github.com:ckundo/a11y-history.git",
   "author": "Cameron Cundiff <cameron@ckundo.com>",
   "license": "MIT",
   "readme": "README.md",
   "bin": {
-    "a11y-blame": "bin/a11y-blame.js"
+    "a11y-history": "bin/a11y-history.js"
   },
   "files": [
     "bin/*.js",
