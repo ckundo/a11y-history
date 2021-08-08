@@ -1,20 +1,20 @@
-## A11Y Blame
+## A11Y History
 
 - Find out the specific commit and line number that introduced an accessibility failure into a git repo.
 
-A11y Blame outputs the author and link to the commit and line where an accessibility error is added.
+A11y History outputs the author and link to the commit and line where an accessibility error is added.
 
 ## Usage
 
-    GITHUB_TOKEN=<...> npx a11y-blame <owner>/<repo>
+    GITHUB_TOKEN=<...> npx a11y-history <owner>/<repo>
 
 ### GitHub Enterprise
 
-    BASE_URL=https://git.example.com/api/v3 GITHUB_TOKEN=<...> npx a11y-blame <owner>/<repo>
+    BASE_URL=https://git.example.com/api/v3 GITHUB_TOKEN=<...> npx a11y-history <owner>/<repo>
 
 ## Example
 
-    % npx a11y-blame dequelabs/axe-core
+    % npx a11y-history dequelabs/axe-core
 
 Outputs: 
 
